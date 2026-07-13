@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="login">Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /*background-color: #f2f2f2;*/
+            /*background-color: #450b86;*/
+            /*background-color: darkgrey;*/
+            background:#0d6efd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 380px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #565657;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #450b86;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <div style="position: fixed; top: 10px; right: 10px;">
+    
+    <a href="home.html" id="home" style="
+        background-color: #1d1e1f31;
+        color: white;
+        padding: 6px 12px;
+        text-decoration: none;
+        border-radius: 5px;">
+        Home</a>
+        
+</div>
+
+    <div class="login-box">
+    <h2>Login</h2>
+    <div class="message" id="message"></div>
+        <form>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button type="button" id="loginBtn" onclick="validateLogin()">Login</button>
+        </form>
+    <div><br></div>
+    <div class="" id="" style="text-align: center;"><a href="registration.html">Register</a></div>
+    </div>
+    
+</div>
+
+<script>
+    function validateLogin() {
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+
+        if (user === "admin" && pass === "1234") {
+            document.getElementById("message").style.color = "450b86";
+            document.getElementById("message").innerText = "Login Successful!";
+        } else {
+            document.getElementById("message").style.color = "red";
+            document.getElementById("message").innerText = "Invalid Credentials!";
+        }
+    }
+</script>
+
+</body>
+</html>

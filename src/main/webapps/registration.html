@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Registration</title>
+
+<style>
+body{
+    font-family: Arial;
+    background-color: darkgrey;
+}
+
+.container{
+    width:400px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0px 0px 10px gray;
+}
+
+h2{
+    text-align:center;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:rgb(45, 46, 45);
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+#message{
+    color:green;
+    text-align:center;
+    font-weight:bold;
+    margin-top:15px;
+}
+</style>
+
+<script>
+
+function registerUser(){
+
+    var firstName=document.getElementById("firstName").value;
+    var lastName=document.getElementById("lastName").value;
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("password").value;
+    var country=document.getElementById("country").value;
+
+    if(firstName=="" || lastName=="" || email=="" || password==""){
+        alert("Please fill all fields.");
+        return false;
+    }
+
+    document.getElementById("message").innerHTML=
+    "Registration Successful!";
+
+    return false;
+
+}
+
+</script>
+
+</head>
+
+<body>
+<div style="position: fixed; top: 10px; right: 10px;">
+    
+    <a href="home.html" id="home" style="
+        background-color: #1d1e1f31;
+        color: white;
+        padding: 6px 12px;
+        text-decoration: none;
+        border-radius: 5px;">
+        Home</a>
+        
+</div>
+<div class="container">
+
+<h2>User Registration</h2>
+
+<form onsubmit="return registerUser();">
+
+<label>First Name</label>
+<input
+type="text"
+id="firstName"
+name="firstName"
+placeholder="Enter First Name">
+
+<label>Last Name</label>
+<input
+type="text"
+id="lastName"
+name="lastName"
+placeholder="Enter Last Name">
+
+<label>Email</label>
+<input
+type="email"
+id="email"
+name="email"
+placeholder="Enter Email">
+
+<label>Password</label>
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Enter Password">
+
+<label>Country</label>
+
+<select id="country">
+
+<option value="">Select Country</option>
+<option>USA</option>
+<option>Canada</option>
+<option>India</option>
+<option>Australia</option>
+
+</select>
+
+<label>
+<input
+type="checkbox"
+id="terms">
+ I agree to Terms & Conditions
+</label>
+
+<br><br>
+
+<button id="registerBtn">
+Register
+</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+</body>
+</html>
