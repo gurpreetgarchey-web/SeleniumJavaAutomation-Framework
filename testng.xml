@@ -13,5 +13,8 @@
     <listeners>
     <listener class-name="listeners.TestListener"/>
 </listeners>
+    <listeners>
+    <listener class-name="listeners.ExtentListener"/>
+</listeners>
 
 </suite>
