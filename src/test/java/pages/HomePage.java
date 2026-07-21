@@ -20,7 +20,7 @@ public class HomePage {
         smartWait = new SmartWait(driver);
     }
 
-    By loginLink = By.linkText("login");
+    By loginLink = By.id("login");
 
     public void clickLoginLink() {
     	smartWait.click(loginLink);
